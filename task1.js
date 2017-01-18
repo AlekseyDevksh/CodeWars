@@ -16,19 +16,6 @@ Note
 
 */
 
-function remove(s){
-  var newArr = [],
-      arrSign = [],
-      i = 0;
-  var arr = s.split('').join('');
-
-  for (i = 0; i < arr.length; i++){
-    if (arr[i] !== "!") {
-      newArr.push(arr[i]);
-    } else {
-        arrSign.push("!");
-    }
-  }
-
-  return newArr.join('') + arrSign.join('');
+function remove(s) {
+  return s.replace(/!/g, '') + s.replace(/[^!]/g, '');
 }
